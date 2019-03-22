@@ -13,5 +13,6 @@ class Transfer
     check_sender = BankAccount.new(self.sender).valid?
     check_receiver = BankAccount.new(self.receiver).valid?
     check_sender && check_receiver ? true : false 
+    binding.pry
   end 
 end
