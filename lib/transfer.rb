@@ -9,7 +9,7 @@ class Transfer
     @status = "pending"
   end 
   
-  def valid?
-    sender = BankAccount.new()
+  def valid?(sender, receiver)
+    sender = BankAccount.new(sender).tap{|e| e.valid?
   end 
 end
