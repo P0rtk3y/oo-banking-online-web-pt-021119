@@ -10,8 +10,8 @@ class Transfer
   end 
   
   def valid?
-    check_sender = BankAccount.new(self.sender).tap{|e| true if e.valid?}
-    check_receiver = BankAccount.new(self.receiver).tap{|e| true if e.valid?}
+    check_sender = BankAccount.new(self.sender).valid?
+    check_receiver = BankAccount.new(self.receiver).valid?
     check_sender && check_receiver ? true : false 
   end 
 end
