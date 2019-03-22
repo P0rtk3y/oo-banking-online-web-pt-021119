@@ -11,8 +11,8 @@ class Transfer
   end 
   
   def valid?
-    check_sender = BankAccount.new(sender).valid?
-    check_receiver = BankAccount.new(receiver).valid?
+    check_sender = BankAccount.sender.valid?
+    check_receiver = BankAccount.receiver.valid?
     check_sender && check_receiver ? true : false
   end 
 end
