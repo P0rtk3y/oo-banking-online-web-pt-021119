@@ -20,7 +20,7 @@ class Transfer
   
   def execute_transaction
     if !sender.valid?
-      "Transaction rejected. Please check your account balance."
+      puts "Transaction rejected. Please check your account balance."
     elsif self.status == "complete"
       "Transfer can only happen once."
     elsif sender.balance > amount 
