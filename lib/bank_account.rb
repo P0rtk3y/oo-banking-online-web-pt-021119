@@ -1,3 +1,5 @@
+require 'pry'
+
 class BankAccount
   attr_reader = :name
   
@@ -6,5 +8,4 @@ class BankAccount
     @balance = 1000
     @status = "open"
   end 
-  
 end
