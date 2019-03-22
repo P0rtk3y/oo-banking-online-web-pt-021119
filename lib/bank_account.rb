@@ -12,7 +12,7 @@ class BankAccount
   
   def deposit(amount)
     @balance += amount 
-    p "Your balance is #{self.balance}."
+    puts "Your balance is #{self.balance}."
   end 
   
 end
