@@ -19,14 +19,15 @@ class Transfer
   end 
   
   def execute_transaction
-    if self.status == "complete"
+    if status == "complete"
       "Transfer can only happen once."
     elsif sender.balance > amount 
       sender.balance -= amount 
       receiver.deposit(amount) 
-      self.status = "complete"
+      status = "complete"
     elsif !sender.valid? 
      "Transaction rejected. Please check your account balance."
+     status = "rejected"
     end 
   end 
   
