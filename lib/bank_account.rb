@@ -19,6 +19,7 @@ class BankAccount
   end 
   
   def valid? 
-    
+    self.balance > 0 
+  end  
   
 end
