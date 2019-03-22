@@ -22,7 +22,7 @@ class Transfer
     if self.status == "complete"
       "Transfer can only happen once."
     elsif !sender.valid?
-      return "Transaction rejected. Please check your account balance."
+      puts "Transaction rejected. Please check your account balance."
     elsif sender.balance > amount 
       sender.balance(-amount) 
       receiver.deposit(amount) 
